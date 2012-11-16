@@ -1,0 +1,19 @@
+{
+  "kango_version": "1.0.0 final", 
+  "content_scripts": [
+    "progress.js"
+  ], 
+  "description": "Moarflo Browser Extension", 
+  "creator": "azoff", 
+  "developer_id": "YOUR_SAFARI_DEVELOPER_ID", 
+  "background_scripts": [], 
+  "homepage_url": "http://moarflo.com/", 
+  "version": "0.0.1", 
+  "browser_button": {
+    "caption": "Moarflo", 
+    "tooltipText": "Moarflo", 
+    "icon": "icons/button.png"
+  }, 
+  "id": "com.kangoextensions.moarflo", 
+  "name": "moarflo"
+}

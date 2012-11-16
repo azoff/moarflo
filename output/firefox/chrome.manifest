@@ -1,0 +1,3 @@
+content moarflo_kango chrome/content/
+overlay chrome://browser/content/browser.xul chrome://moarflo_kango/content/content.xul
+resource moarflo_kango chrome/content/

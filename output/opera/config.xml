@@ -1,0 +1,10 @@
+<?xml version="1.0" ?><widget id="http://kangoextensions.com/extensions/moarflo/" version="0.0.1" xmlns="http://www.w3.org/ns/widgets">
+	<name>moarflo</name>
+	<description>Moarflo Browser Extension</description>
+	<author href="http://moarflo.com/">azoff</author>
+	<update-description href=""/>
+	<icon src="icons/icon100.png"/>
+	<content src="background.html"/>
+	<access origin="*"/>
+	<feature name="opera:share-cookies"/>
+</widget>
