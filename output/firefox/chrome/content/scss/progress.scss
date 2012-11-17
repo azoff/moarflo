@@ -1,0 +1,66 @@
+@import 'compass';
+
+@mixin embossed($color) {
+	@include background-image(linear-gradient(fade-out(white, 0.6), fade-out(white, 1)));
+	background-color: $color;
+	border: solid 1px darker($color, 5%);
+}
+
+.moarflo-progress {
+
+	$height: 50px;
+	$padding: 5px;
+	$duration: 1s;
+
+	@include embossed(#444);
+	@include box-sizing(border-box);
+	@include transition(opacity $duration, top $duration);
+	@include box-shadow(0 0 4px 2px fade-out(black, 0.5));
+
+	display: block !important;
+	position: fixed;
+	z-index: 9999;
+	padding: $padding ($padding + 2px) $padding $padding;
+	height: $height;
+	width: 100%;
+	top: -($height);
+	left: 0;
+
+	.moarflo-progress-bar, .moarflo-progress-value {
+		@include embossed(transparent);
+		@include box-sizing(border-box);
+		height: 98%;
+	}
+
+	.moarflo-progress-bar {
+		width: 100%;
+		background-color: #555;
+		border-color: darker(#555, 5%);
+	}
+
+	.moarflo-progress-value {
+		@include transition(width $duration, background-color $duration, border-color $duration);
+		width: 50%;
+		background-color: #64bc3b;
+		border-color: darker(#64bc3b, 5%);
+	}
+
+	&.moarflo-active {
+		top: 0;
+	}
+
+	&.moarflo-error {
+		.moarflo-progress-value {
+			background-color: #bc1200;
+			border-color: darker(#bc1200, 5%);
+		}
+	}
+
+	&.moarflo-prompt {
+		.moarflo-progress-value {
+			background-color: #f3e800;
+			border-color: darker(#f3e800, 5%);
+		}
+	}
+
+}

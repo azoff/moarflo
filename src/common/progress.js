@@ -2,38 +2,22 @@
 // @name bar
 // @include http*
 // @require lib/jquery.js
+// @require lib/moar.js
 // ==/UserScript==
 
-(function(global, api, $) {
+(function(moar, $) {
 
 	var progress;
 
-	function readFile(file, callback) {
-		api.xhr.send({
-			async: true,
-			method: 'GET',
-			url: file,
-			contentType: 'text'
-		}, function(data) {
-			callback(data.response);
-		});
-	}
-
-	function injectStyles(css) {
-		$('<style type="text/css" />')
-			.html(css)
-			.appendTo('head');
-	}
-
-	function injectMarkup(html) {
-		progress = $(html).prependTo('body');
+	function injectProgress(markup) {
+		progress = moar.injectMarkup(markup);
 	}
 
 	function init() {
-		readFile('css/progress.css', injectStyles);
-		readFile('html/progress.html', injectMarkup);
+		moar.readFile('css/progress.css').then(moar.injectStyles);
+		moar.readFile('html/progress.html').then(injectProgress);
 	}
 
 	$(init);
 
-})(window, kango, jQuery.noConflict(true));
+})(moar, jQuery);
