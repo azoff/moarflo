@@ -1,0 +1,53 @@
+@import 'compass';
+@import 'shared';
+
+.moarflo-tooltip {
+
+	$top: 60px;
+	$padding: 5px;
+	$duration: 1s;
+
+	@include opacity(0);
+	@include embossed(#444);
+	@include box-sizing(border-box);
+	@include border-radius($padding);
+	@include transition(opacity $duration, left $duration, top $duration);
+	@include box-shadow(0 0 4px 2px fade-out(black, 0.5));
+
+	left: 0;
+	top: -($top);
+	position: fixed;
+	display: block !important;
+	padding: $padding;
+
+	&.moarflo-active {
+		top: $top;
+		@include opacity(1);
+	}
+
+	.moarflo-tooltip-content {
+		@include embossed(#64bc3b);
+		@include box-sizing(border-box);
+		@include border-radius($padding);
+		@include transition(background-color $duration, color $duration);
+		text-align: center;
+		padding: $padding;
+		line-height: 1.2;
+		color: white;
+	}
+
+	&.moarflo-error {
+		.moarflo-tooltip-content {
+			background-color: #bc1200;
+			border-color: darker(#bc1200, 5%);
+		}
+	}
+
+	&.moarflo-prompt {
+		.moarflo-tooltip-content {
+			background-color: #f3e800;
+			border-color: darker(#f3e800, 5%);
+		}
+	}
+
+}

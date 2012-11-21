@@ -1,10 +1,5 @@
 @import 'compass';
-
-@mixin embossed($color) {
-	@include background-image(linear-gradient(fade-out(white, 0.6), fade-out(white, 1)));
-	background-color: $color;
-	border: solid 1px darker($color, 5%);
-}
+@import 'shared';
 
 .moarflo-progress {
 

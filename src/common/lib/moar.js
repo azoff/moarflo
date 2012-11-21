@@ -26,7 +26,14 @@
 		return $(html).prependTo(dom.body);
 	}
 
+	function on(event, callback) {
+		api.addMessageListener(event, function(event) {
+			callback(event.data || {});
+		});
+	}
+
 	global.moar = {
+		on: on,
 		readFile: readFile,
 		injectStyles: injectStyles,
 		injectMarkup: injectMarkup
