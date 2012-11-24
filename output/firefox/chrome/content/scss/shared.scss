@@ -1,7 +1,0 @@
-@mixin embossed($color, $gloss: white) {
-	@if $gloss != transparent {
-		@include background-image(linear-gradient(fade-out($gloss, 0.6), fade-out($gloss, 1)));
-	}
-	background-color: $color;
-	border: solid 1px darker($color, 5%);
-}
