@@ -26,7 +26,25 @@
 		return $(html).prependTo(dom.body);
 	}
 
+	function on(event, callback) {
+		api.addMessageListener(event, function(event) {
+			callback(event.data || {});
+		});
+	}
+
+	function log(args) {
+		args = Array.prototype.slice.call(arguments);
+		api.console.log.apply(api.console, args);
+		if (global.console) try {
+			global.console.log.apply(global.console, args);
+		} catch (e) {
+			global.console.log(args.join(' '));
+		}
+	}
+
 	global.moar = {
+		on: on,
+		log: log,
 		readFile: readFile,
 		injectStyles: injectStyles,
 		injectMarkup: injectMarkup

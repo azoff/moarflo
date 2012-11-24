@@ -1,11 +1,11 @@
 {
 	"content_scripts":[
-		"progress.js"
+		"moar.content.js"
 	],
 	"description":"Moarflo Browser Extension",
 	"creator":"azoff",
 	"background_scripts":[
-
+		"moar.background.js"
 	],
 	"homepage_url":"http://moarflo.com/",
 	"version":"0.0.1",

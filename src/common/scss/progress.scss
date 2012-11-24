@@ -7,10 +7,11 @@
 	$padding: 5px;
 	$duration: 1s;
 
+	@include opacity(0);
 	@include embossed(#444);
 	@include box-sizing(border-box);
-	@include transition(opacity $duration, top $duration);
-	@include box-shadow(0 0 4px 2px fade-out(black, 0.5));
+	@include transition(opacity $duration, box-shadow $duration, top $duration);
+	@include box-shadow(0 0 0 0 transparent);
 
 	display: block !important;
 	position: fixed;
@@ -42,6 +43,8 @@
 
 	&.moarflo-active {
 		top: 0;
+		@include opacity(1);
+		@include box-shadow(0 2px 2px -2px fade-out(black, 0.5));
 	}
 
 	&.moarflo-error {
