@@ -2,17 +2,18 @@
 	"content_scripts":[
 		"moar.content.js"
 	],
-	"description":"Moarflo Browser Extension",
-	"creator":"azoff",
-	"background_scripts":[
+	"description": "Moarflo Browser Extension",
+	"creator": "azoff",
+	"background_scripts": [
 		"moar.background.js"
 	],
-	"homepage_url":"http://moarflo.com/",
-	"version":"0.0.1",
-	"browser_button":{
-		"caption":"Moarflo",
-		"icon":"icons/button.png",
-		"tooltipText":"Moarflo"
+	"homepage_url": "http://moarflo.com/",
+	"options_page": "options.html",
+	"version": "0.0.1",
+	"browser_button": {
+		"caption": "Moarflo",
+		"icon": "icons/button.png",
+		"tooltipText": "Moarflo"
 	},
-	"name":"moarflo"
+	"name": "moarflo"
 }

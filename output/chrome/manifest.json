@@ -24,6 +24,7 @@
   }, 
   "homepage_url": "http://moarflo.com/", 
   "version": "0.0.1", 
+  "options_page": "options.html", 
   "background": {
     "page": "background.html"
   }, 

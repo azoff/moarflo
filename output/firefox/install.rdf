@@ -15,7 +15,7 @@
 		<em:homepageURL>http://moarflo.com/</em:homepageURL>
 		
 		<em:iconURL>chrome://moarflo_kango/content/icons/icon32.png</em:iconURL>
-		
-		
+		<em:optionsURL>chrome://moarflo_kango/content/options.html</em:optionsURL>
+		<em:optionsType>3</em:optionsType>
     </Description>
 </RDF>

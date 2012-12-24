@@ -21,8 +21,8 @@
 
 	function inject() {
 		return $.when(
-			moar.readFile('css/moarflo.css').then(moar.injectStyles),
-			moar.readFile('html/moarflo.html').then(parseMarkup)
+			moar.readFile('css/content.css').then(moar.injectStyles),
+			moar.readFile('content.html').then(parseMarkup)
 		);
 	}
 
