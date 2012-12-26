@@ -1,7 +1,5 @@
 @import 'compass';
 
-@import url("http://fonts.googleapis.com/css?family=Montserrat:700");
-
 @mixin embossed($color, $gloss: white) {
 	@if $gloss != transparent {
 		@include background-image(linear-gradient(fade-out($gloss, 0.6), fade-out($gloss, 1)));
@@ -18,7 +16,7 @@
 
 	@include box-sizing(border-box);
 
-	font: 16px 'Montserrat', sans-serif;
+	font: 16px "Arial Black", Arial;
 	display: block !important;
 	position: fixed;
 	z-index: 9999;

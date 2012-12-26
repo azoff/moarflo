@@ -6,19 +6,33 @@
 	<title>Your User Profile</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" type="text/css" href="css/options.css">
 	<script src="kango-ui/kango_api.js"></script>
 	<script src="lib/jquery.js"></script>
-	<script src="moar.options.js"></script>
+	<script src="options.js"></script>
 </head>
 <body>
-	<form action="javascript:void(0)" method="POST">
+	<form class="moarflo-options" action="javascript:void(0)" method="POST" autocomplete="off">
+		<h1>Your User Profile</h1>
 		<fieldset>
 			<label for="first_name">First Name</label>
-			<input type="text" id="first_name" name="first_name" />
+			<input placeholder="e.g. John" type="text" id="first_name" name="first_name" />
 		</fieldset>
 		<fieldset>
 			<label for="last_name">Last Name</label>
-			<input type="text" id="last_name" name="last_name" />
+			<input placeholder="e.g. Doe" type="text" id="last_name" name="last_name" />
+		</fieldset>
+		<fieldset>
+			<label for="email_address">Email Address</label>
+			<input placeholder="e.g. johndoe@gmail.com" type="email" id="email_address" name="email_address" />
+		</fieldset>
+		<fieldset>
+			<label for="phone_number">Phone Number</label>
+			<input placeholder="e.g. 8888888888" type="tel" id="phone_number" name="phone_number" />
+		</fieldset>
+		<fieldset>
+			<label for="date_of_birth">Date Of Birth</label>
+			<input placeholder="e.g. YYYY-MM-DD" type="date" id="date_of_birth" name="date_of_birth" />
 		</fieldset>
 	</form>
 </body>

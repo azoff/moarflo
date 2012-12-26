@@ -1,0 +1,33 @@
+.moarflo-options {
+
+	color: #444;
+	font: 16px Arial, sans-serif;
+	padding: 0 1em;
+
+	h1 {
+		font: bold "Arial Black", Arial, sans-serif;
+	}
+
+	fieldset {
+
+		border: none 0px transparent;
+
+		label, input {
+			display: block;
+			float: left;
+			clear: both;
+		}
+
+		label {
+			color: #666;
+			font-size: smaller;
+			margin-bottom: 0.2em;
+		}
+
+		input {
+			color: #444;
+			font-family: Arial, sans-serif;
+		}
+
+	}
+}

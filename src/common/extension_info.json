@@ -1,12 +1,8 @@
 {
-	"content_scripts":[
-		"moar.content.js"
-	],
+	"content_scripts": ["content.js"],
 	"description": "Moarflo Browser Extension",
 	"creator": "azoff",
-	"background_scripts": [
-		"moar.background.js"
-	],
+	"background_scripts": ["background.js"],
 	"homepage_url": "http://moarflo.com/",
 	"options_page": "options.html",
 	"version": "0.0.1",

@@ -2,6 +2,16 @@
 
 	$.noConflict();
 
+	var plugins = {};
+
+	function getPlugin(name) {
+		if (name in plugins) {
+			return plugins[name];
+		}
+		var job = plugins[name] = $.Deferred();
+		$.getScript('plugins/' + name + '.js');
+	}
+
 	function readFile(file) {
 		var job = $.Deferred();
 		api.xhr.send({
